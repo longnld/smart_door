@@ -28,10 +28,10 @@
             </div>
             <div class="flex-grow border-r-8 drop-shadow-md rounded-md pl-6 ">
                 <!-- Navigation  -->
-                <div data-url="index.html" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  text-black clickable-div">
+                <!-- <div data-url="index.html" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  text-black clickable-div">
                     <i class="bi bi-house-door-fill"></i>
                     <span class="text-[15px] ml-8 text-black font-bold">Home</span>
-                </div>
+                </div> -->
                 
                 <div data-url="control-page.html" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  text-black  clickable-div">
                     <i class="bi bi-shield-lock-fill"></i>
@@ -63,11 +63,36 @@
             </div>
             
             <div class="flex flex-grow flex-row bg-white">
-                
+                <!-- Content -->
+                <!-- Stream video -->
+                <div class="flex flex-col w-3/5 h-full  pt-12 pb-36 items-center justify-center ">
+                    <!-- <iframe  
+                    class=" w-4/5 h-full  rounded-3xl" 
+                    width="560" height="315" 
+                    src="https://www.youtube.com/embed/6H-PLF2CR18?si=Lt8yzAsU8yl9JYMW" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                         
+                    <div class="flex flex-row mt-7 w-full justify-around">
+                        <button id="toggleBtn" class="middle none center rounded-lg bg-sky-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                            <i class="bi bi-lock-fill"></i> 
+                        </button>
+                    </div>
+                </div>
+                <!-- logs -->
+                <div class="flex-grow max-h-96 overflow-y-auto mt-5 mr-4 mb-20 p-4 bg-gray-50 border-2 border-violet-200 rounded-s-3xl" id="log">
+                    <!-- Log entries will be appended here -->
+                </div>
             </div>
         </div>
     </div>
-    <script src="static/dist/js/clickableNavDivs.js" defer></script>
 
+    <script src="static/dist/js/toggleLock.js" defer type="module"></script>
+    <script src="static/dist/js/addLogEntry.js" defer type="module"></script>
+    <script src="static/dist/js/clickableNavDivs.js" defer></script>
+    
+    
 </body>
 </html>
